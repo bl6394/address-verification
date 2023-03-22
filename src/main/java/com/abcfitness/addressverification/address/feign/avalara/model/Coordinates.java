@@ -1,6 +1,4 @@
-package com.abcfitness.addressverification.model;
-
-import java.util.List;
+package com.abcfitness.addressverification.address.feign.avalara.model;
 
 public class Coordinates {
 

@@ -3,8 +3,8 @@ package com.abcfitness.addressverification.address;
 import com.abcfitness.addressverification.address.entity.AvalaraResponseMessage;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 
 public class AvalaraResponseVO {
 

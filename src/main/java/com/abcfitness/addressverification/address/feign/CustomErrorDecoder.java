@@ -1,7 +1,7 @@
-package com.abcfitness.addressverification.config;
+package com.abcfitness.addressverification.address.feign;
 
-import com.abcfitness.addressverification.exception.BadRequestException;
-import com.abcfitness.addressverification.exception.NotFoundException;
+import com.abcfitness.addressverification.address.feign.exception.BadRequestException;
+import com.abcfitness.addressverification.address.feign.exception.NotFoundException;
 import feign.Response;
 import feign.codec.ErrorDecoder;
 

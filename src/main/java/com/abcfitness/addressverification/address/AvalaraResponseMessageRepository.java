@@ -1,6 +1,5 @@
 package com.abcfitness.addressverification.address;
 
-import com.abcfitness.addressverification.address.entity.AvalaraResponse;
 import com.abcfitness.addressverification.address.entity.AvalaraResponseMessage;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

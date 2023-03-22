@@ -1,4 +1,4 @@
-package com.abcfitness.addressverification.exception;
+package com.abcfitness.addressverification.address.feign.exception;
 
 public class NotFoundException extends Exception {
 

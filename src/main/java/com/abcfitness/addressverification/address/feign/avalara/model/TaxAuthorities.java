@@ -1,4 +1,4 @@
-package com.abcfitness.addressverification.model;
+package com.abcfitness.addressverification.address.feign.avalara.model;
 
 public class TaxAuthorities {
 

@@ -2,9 +2,7 @@ package com.abcfitness.addressverification.address;
 
 import com.abcfitness.addressverification.address.entity.Address;
 import com.abcfitness.addressverification.address.entity.AvalaraResponseMessage;
-import com.abcfitness.addressverification.address.entity.Corrected;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,10 +18,9 @@ public class AddressVO {
     private String state;
     private String zip;
     private String plus4;
-    private CorrectedVO corrected;
     private List<AvalaraMessageVO> messages;
 
-    public AddressVO (Address address, List<AvalaraResponseMessage> messages, Corrected corrected){
+    public AddressVO (Address address, List<AvalaraResponseMessage> messages){
         this.id = address.getId();
         this.clubNumber = address.getClubNumber();
         this.clubName = address.getClubName();
@@ -35,7 +32,6 @@ public class AddressVO {
         this.zip = address.getZip();
         this.plus4 = address.getPlus4();
         this.messages = messages.stream().map(element -> new AvalaraMessageVO(element)).collect(Collectors.toList());
-        this.corrected = corrected == null ? null : new CorrectedVO(corrected);
     }
 
     public String getClubNumber() {
@@ -116,14 +112,6 @@ public class AddressVO {
 
     public void setMessages(List<AvalaraMessageVO> messages) {
         this.messages = messages;
-    }
-
-    public CorrectedVO getCorrected() {
-        return corrected;
-    }
-
-    public void setCorrected(CorrectedVO corrected) {
-        this.corrected = corrected;
     }
 
     public Long getId() {

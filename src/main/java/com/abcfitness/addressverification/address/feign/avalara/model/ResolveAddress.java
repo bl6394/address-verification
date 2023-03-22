@@ -1,4 +1,4 @@
-package com.abcfitness.addressverification.model;
+package com.abcfitness.addressverification.address.feign.avalara.model;
 
 import java.util.ArrayList;
 import java.util.List;

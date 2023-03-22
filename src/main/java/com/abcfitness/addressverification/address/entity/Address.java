@@ -2,6 +2,8 @@ package com.abcfitness.addressverification.address.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "address")
 public class Address {
@@ -20,13 +22,8 @@ public class Address {
     private String zip;
     private String plus4;
 
-    @OneToOne(cascade = CascadeType.ALL, optional = true, orphanRemoval = true)
-    @JoinTable(name = "addr_corr",
-            joinColumns =
-                    { @JoinColumn(name = "address_id", referencedColumnName = "id") },
-            inverseJoinColumns =
-                    { @JoinColumn(name = "corrected_id", referencedColumnName = "id") })
-    private Corrected corrected;
+    @OneToMany(mappedBy="address")
+    private Set<Candidate> candidates;
 
     protected Address(){}
 
@@ -122,11 +119,19 @@ public class Address {
         this.active = active;
     }
 
-    public Corrected getCorrected() {
-        return corrected;
+//    public Corrected getCorrected() {
+//        return corrected;
+//    }
+//
+//    public void setCorrected(Corrected corrected) {
+//        this.corrected = corrected;
+//    }
+
+    public Set<Candidate> getCandidates() {
+        return candidates;
     }
 
-    public void setCorrected(Corrected corrected) {
-        this.corrected = corrected;
+    public void setCandidates(Set<Candidate> candidates) {
+        this.candidates = candidates;
     }
 }
