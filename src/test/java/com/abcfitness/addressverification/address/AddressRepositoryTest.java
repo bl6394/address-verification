@@ -1,7 +1,5 @@
 package com.abcfitness.addressverification.address;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import com.abcfitness.addressverification.address.entity.Address;
 import com.abcfitness.addressverification.address.entity.AvalaraResponse;
 import com.abcfitness.addressverification.address.entity.AvalaraResponseMessage;
@@ -11,6 +9,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 class AddressRepositoryTest {

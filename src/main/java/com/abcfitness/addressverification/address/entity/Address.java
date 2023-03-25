@@ -119,14 +119,6 @@ public class Address {
         this.active = active;
     }
 
-//    public Corrected getCorrected() {
-//        return corrected;
-//    }
-//
-//    public void setCorrected(Corrected corrected) {
-//        this.corrected = corrected;
-//    }
-
     public Set<Candidate> getCandidates() {
         return candidates;
     }

@@ -17,6 +17,9 @@ public class AvalaraResponse {
 
     @Temporal(TemporalType.TIMESTAMP)
     private java.util.Date created;
+    private double latitude;
+    private double longitude;
+    private String resolutionQuality;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "address_id", nullable = false)

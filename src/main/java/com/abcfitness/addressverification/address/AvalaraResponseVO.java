@@ -12,7 +12,7 @@ public class AvalaraResponseVO {
     private Date created;
     private List<AvalaraMessageVO> messages;
 
-    AvalaraResponseVO (Date created, List<AvalaraResponseMessage> avalaraResponseMessages){
+    public AvalaraResponseVO (Date created, List<AvalaraResponseMessage> avalaraResponseMessages){
         this.created = created;
         this.messages = new ArrayList<>();
         for (AvalaraResponseMessage message : avalaraResponseMessages){
